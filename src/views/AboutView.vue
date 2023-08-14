@@ -75,6 +75,7 @@ const handleActualpage = async (pageNew: number) => {
 const handleActualLimit = async (newLimit: number) => {
   dataLoaded.value = false;
   pageSize.value = newLimit;
+  page.value = 1;
   await getEmployees();
   dataLoaded.value = true;
 }
